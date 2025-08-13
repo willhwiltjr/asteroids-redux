@@ -4,9 +4,11 @@ from constants import PLAYER_RADIUS
 # Base class for game objects
 class CircleShape(pygame.sprite.Sprite):
     def __init__(self, x, y, radius):
+        super().__init__()
         # we will be using this later
         if hasattr(self, "containers"):
-            super().__init__(self.containers)
+            for group in self.containers:
+                group.add(self)
         else:
             super().__init__()
 
