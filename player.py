@@ -41,7 +41,7 @@ class Player(CircleShape):
 
         if keys[pygame.K_SPACE]:
             if self.shot_timer>0:
-                print("cant shoot")
+                return
             else:
                 self.shoot()
 

@@ -46,7 +46,7 @@ def main():
                 sys.exit("Game over!")
             for shot in shots:
                 if shot.iscolliding(stroid):
-                    stroid.kill()
+                    stroid.split()
                     shot.kill()  
         for obj in drawable:
             obj.draw(screen)
